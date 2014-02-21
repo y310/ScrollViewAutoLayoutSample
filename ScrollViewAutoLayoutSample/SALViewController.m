@@ -9,6 +9,10 @@
 #import "SALViewController.h"
 
 @interface SALViewController ()
+<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *heightConstraint;
+@property (weak, nonatomic) IBOutlet UILabel *imageTitleLabel;
 
 @end
 
@@ -17,13 +21,35 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    [self _updateConstraint];
 }
 
-- (void)didReceiveMemoryWarning
+- (IBAction)changePhoto:(id)sender {
+    UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
+    imagePicker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+    imagePicker.delegate = self;
+
+    [self presentViewController:imagePicker animated:YES completion:NULL];
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    UIImage *image = info[UIImagePickerControllerOriginalImage];
+    self.imageView.image = image;
+    [self _updateConstraint];
+    [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
+- (void)_updateConstraint
+{
+    UIImage *image = self.imageView.image;
+    CGFloat multiplier = (CGRectGetWidth(self.imageView.bounds) / image.size.width);
+    [self.heightConstraint setConstant:multiplier * image.size.height];
+    self.imageTitleLabel.text = @[@"寝起きのコツメカワウソ", @"コツメカワウソの日常", @"ポン・デ・カワウソ", @"横幅を超える長さのとても長い文章のテスト"][rand() % 4];
+}
 @end

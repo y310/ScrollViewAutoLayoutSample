@@ -1,23 +1,94 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4451" systemVersion="13A461" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3676"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="SALViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XHH-8c-ZsG"/>
+                        <viewControllerLayoutGuide type="bottom" id="iZQ-bU-FYm"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xca-Yj-gFJ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Auto Layout Example" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Fv-Ol-d3Z">
+                                        <rect key="frame" x="20" y="24" width="164" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJS-bW-FQA">
+                                        <rect key="frame" x="246" y="20" width="54" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Change">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="changePhoto:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="jYh-0J-Yas"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="FJ5-9K-eNp">
+                                        <rect key="frame" x="20" y="58" width="280" height="196"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="196" id="Y23-M1-xQV"/>
+                                            <constraint firstAttribute="width" constant="280" id="xS0-9Q-EzF"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="saW-AQ-1Jb">
+                                        <rect key="frame" x="20" y="262" width="80" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="2Fv-Ol-d3Z" firstAttribute="leading" secondItem="xca-Yj-gFJ" secondAttribute="leading" constant="20" id="4kC-fl-k34"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="saW-AQ-1Jb" secondAttribute="trailing" constant="20" id="IGh-f9-kKf"/>
+                                    <constraint firstAttribute="trailing" secondItem="eJS-bW-FQA" secondAttribute="trailing" constant="20" id="L4i-Lb-jqX"/>
+                                    <constraint firstItem="saW-AQ-1Jb" firstAttribute="leading" secondItem="FJ5-9K-eNp" secondAttribute="leading" id="QG0-AX-k3o"/>
+                                    <constraint firstItem="FJ5-9K-eNp" firstAttribute="top" secondItem="eJS-bW-FQA" secondAttribute="bottom" constant="8" id="TLD-LC-kL8"/>
+                                    <constraint firstItem="saW-AQ-1Jb" firstAttribute="leading" secondItem="2Fv-Ol-d3Z" secondAttribute="leading" id="WR4-YR-fFN"/>
+                                    <constraint firstItem="2Fv-Ol-d3Z" firstAttribute="centerY" secondItem="eJS-bW-FQA" secondAttribute="centerY" id="hyZ-CR-yXc"/>
+                                    <constraint firstItem="2Fv-Ol-d3Z" firstAttribute="top" secondItem="xca-Yj-gFJ" secondAttribute="top" constant="24" id="mhY-Ib-qqV"/>
+                                    <constraint firstItem="FJ5-9K-eNp" firstAttribute="trailing" secondItem="eJS-bW-FQA" secondAttribute="trailing" id="pMk-LB-Sru"/>
+                                    <constraint firstAttribute="bottom" secondItem="saW-AQ-1Jb" secondAttribute="bottom" constant="20" id="qGo-I5-g1g"/>
+                                    <constraint firstItem="saW-AQ-1Jb" firstAttribute="top" secondItem="FJ5-9K-eNp" secondAttribute="bottom" constant="8" id="uJG-lE-Yqc"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xca-Yj-gFJ" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="5tQ-68-d6o"/>
+                            <constraint firstAttribute="bottom" secondItem="xca-Yj-gFJ" secondAttribute="bottom" id="JFv-Al-tMk"/>
+                            <constraint firstItem="xca-Yj-gFJ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="bED-Vl-be2"/>
+                            <constraint firstAttribute="trailing" secondItem="xca-Yj-gFJ" secondAttribute="trailing" id="iz3-Wx-obU"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="heightConstraint" destination="Y23-M1-xQV" id="BGY-OV-dJ6"/>
+                        <outlet property="imageTitleLabel" destination="saW-AQ-1Jb" id="c1c-YI-ZbI"/>
+                        <outlet property="imageView" destination="FJ5-9K-eNp" id="Vlm-Z9-FJq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="132" y="20"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="image.jpg" width="1024" height="768"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

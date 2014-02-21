@@ -21,6 +21,7 @@
 		46DCDEDD18B587A70069C31D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46DCDEBF18B587A70069C31D /* UIKit.framework */; };
 		46DCDEE518B587A70069C31D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 46DCDEE318B587A70069C31D /* InfoPlist.strings */; };
 		46DCDEE718B587A70069C31D /* ScrollViewAutoLayoutSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 46DCDEE618B587A70069C31D /* ScrollViewAutoLayoutSampleTests.m */; };
+		46DCDEF118B59CA60069C31D /* image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 46DCDEF018B59CA60069C31D /* image.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		46DCDEE218B587A70069C31D /* ScrollViewAutoLayoutSampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ScrollViewAutoLayoutSampleTests-Info.plist"; sourceTree = "<group>"; };
 		46DCDEE418B587A70069C31D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		46DCDEE618B587A70069C31D /* ScrollViewAutoLayoutSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollViewAutoLayoutSampleTests.m; sourceTree = "<group>"; };
+		46DCDEF018B59CA60069C31D /* image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 				46DCDECD18B587A70069C31D /* Main.storyboard */,
 				46DCDED018B587A70069C31D /* SALViewController.h */,
 				46DCDED118B587A70069C31D /* SALViewController.m */,
+				46DCDEF018B59CA60069C31D /* image.jpg */,
 				46DCDED318B587A70069C31D /* Images.xcassets */,
 				46DCDEC218B587A70069C31D /* Supporting Files */,
 			);
@@ -232,6 +235,7 @@
 				46DCDED418B587A70069C31D /* Images.xcassets in Resources */,
 				46DCDEC618B587A70069C31D /* InfoPlist.strings in Resources */,
 				46DCDECF18B587A70069C31D /* Main.storyboard in Resources */,
+				46DCDEF118B59CA60069C31D /* image.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
